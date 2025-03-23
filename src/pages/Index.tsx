@@ -12,6 +12,9 @@ import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {
+    // Set dark mode by default
+    document.documentElement.classList.add('dark');
+    
     // Add scroll revealing animations
     const revealElements = document.querySelectorAll('.animate-on-scroll');
     
@@ -19,7 +22,7 @@ const Index = () => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in-up');
-          observer.unobserve(entry.target);
+          // Don't unobserve - this allows re-animation when revisiting sections
         }
       });
     };
@@ -41,7 +44,7 @@ const Index = () => {
   }, []);
   
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground dark:bg-background dark:text-foreground">
       <Header />
       <main>
         <HeroSection />

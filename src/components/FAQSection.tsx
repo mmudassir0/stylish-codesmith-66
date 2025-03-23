@@ -32,7 +32,7 @@ export function FAQSection() {
   ];
 
   return (
-    <section id="faq" className="section py-24 bg-gradient-to-b from-background to-background/80">
+    <section id="faq" className="section py-24 bg-gradient-to-b from-background to-background/80 dark:from-background dark:to-background/90">
       <div className="container">
         <div className="text-center mb-16 animate-on-scroll opacity-0">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-3 flex items-center justify-center mx-auto gap-2">
@@ -46,7 +46,7 @@ export function FAQSection() {
         </div>
         
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="bg-background/50 p-6 rounded-xl border border-border/40 shadow-sm">
+          <Accordion type="single" collapsible className="bg-background/50 dark:bg-background/20 p-6 rounded-xl border border-border/40 shadow-sm">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-border/30 last:border-0">
                 <AccordionTrigger className="text-lg font-medium py-5 hover:text-tech-accent transition-colors">
