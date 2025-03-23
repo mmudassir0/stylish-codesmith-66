@@ -5,6 +5,7 @@ import { AboutSection } from "@/components/AboutSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { WorkspaceSection } from "@/components/WorkspaceSection";
 import { StyleSection } from "@/components/StyleSection";
+import { FAQSection } from "@/components/FAQSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { useEffect } from "react";
@@ -48,6 +49,7 @@ const Index = () => {
         <SkillsSection />
         <WorkspaceSection />
         <StyleSection />
+        <FAQSection />
         <ContactSection />
       </main>
       <Footer />
