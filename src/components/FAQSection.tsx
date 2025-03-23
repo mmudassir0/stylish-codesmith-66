@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { QuestionMarkCircle } from "lucide-react";
+import { HelpCircle } from "lucide-react";
 
 export function FAQSection() {
   const faqs = [
@@ -36,7 +36,7 @@ export function FAQSection() {
       <div className="container">
         <div className="text-center mb-16 animate-on-scroll opacity-0">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-3 flex items-center justify-center mx-auto gap-2">
-            <QuestionMarkCircle size={14} className="animate-pulse" />
+            <HelpCircle size={14} className="animate-pulse" />
             FAQ
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Common Questions</h2>
