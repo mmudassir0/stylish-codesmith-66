@@ -17,31 +17,36 @@ const Index = () => {
     // Set page title
     document.title = "Mudassir Abbas | Full Stack Developer";
     
-    // Add scroll revealing animations
+    // Add scroll revealing animations with improved implementation
     const revealElements = document.querySelectorAll('.animate-on-scroll');
     
     const revealElementOnScroll = (entries: IntersectionObserverEntry[]) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('animate-fade-in-up');
-          // Don't unobserve - this allows re-animation when revisiting sections
+          // Keep observing to ensure visibility is maintained
         }
       });
     };
     
+    // Use a more reliable intersection threshold
     const observer = new IntersectionObserver(revealElementOnScroll, {
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      rootMargin: '0px 0px -100px 0px'
     });
     
     revealElements.forEach(element => {
+      // Reset any potentially existing animation classes
+      element.classList.remove('animate-fade-in-up');
       observer.observe(element);
     });
     
     return () => {
-      revealElements.forEach(element => {
-        observer.unobserve(element);
-      });
+      if (revealElements) {
+        revealElements.forEach(element => {
+          observer.unobserve(element);
+        });
+      }
     };
   }, []);
   

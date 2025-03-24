@@ -17,15 +17,20 @@ export function FAQSection() {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in-up');
-            observer.unobserve(entry.target);
+            // Don't unobserve to ensure elements stay visible when revisiting
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      }
     );
     
     const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
     childElements?.forEach(el => {
+      // Reset any existing animation classes
+      el.classList.remove('animate-fade-in-up');
       observer.observe(el);
     });
     
