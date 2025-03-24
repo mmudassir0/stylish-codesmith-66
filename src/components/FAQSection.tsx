@@ -1,47 +1,79 @@
 
-import { 
+import { useEffect, useRef } from 'react';
+import { HelpCircle } from 'lucide-react';
+import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { HelpCircle } from "lucide-react";
 
 export function FAQSection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    
+    const childElements = sectionRef.current?.querySelectorAll('.animate-on-scroll');
+    childElements?.forEach(el => {
+      observer.observe(el);
+    });
+    
+    return () => {
+      childElements?.forEach(el => {
+        observer.unobserve(el);
+      });
+    };
+  }, []);
+  
   const faqs = [
     {
-      question: "How does Mudassir Abbas blend tech and fashion?",
-      answer: "Mudassir Abbas seamlessly integrates cutting-edge technology with fashion-forward sensibilities. From smart wearables with hidden tech features to minimalist designs inspired by clean code architecture, his approach creates harmony between digital innovation and sartorial expression."
+      question: "What services do you offer as a full stack developer?",
+      answer: "I provide comprehensive web development services including frontend and backend development, database design, API development, deployment, and maintenance. I specialize in building complete web applications from conception to deployment using modern technologies."
     },
     {
-      question: "What programming languages does Mudassir specialize in?",
-      answer: "Mudassir is proficient in multiple programming paradigms, with expertise in JavaScript/TypeScript, Python, Rust, and Golang. He particularly enjoys functional programming and is passionate about clean, efficient code that's both performant and maintainable."
+      question: "What technologies do you primarily work with?",
+      answer: "My core tech stack includes JavaScript/TypeScript, React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I'm also experienced with AWS, Docker, GraphQL, and various frontend frameworks. I continuously expand my skillset to stay current with industry trends."
     },
     {
-      question: "How does Mudassir stay updated with tech trends?",
-      answer: "Through a combination of continuous learning, open-source contributions, tech conferences, and an extensive network of fellow innovators. He dedicates time each week to experiment with emerging technologies and regularly shares his findings through his technical blog and social channels."
+      question: "How do you approach a new development project?",
+      answer: "I start with thorough requirements gathering and planning to understand project goals. Then I create a technical architecture, develop iteratively with regular client feedback, implement thorough testing, and finally deploy with proper documentation. Communication is maintained throughout the entire process."
     },
     {
-      question: "Can Mudassir help with my tech project?",
-      answer: "Absolutely! Mudassir is open to consulting opportunities, speaking engagements, and collaborative projects that align with his expertise in modern web development, AI implementation, and technology integration. Feel free to reach out through the contact section."
+      question: "Can you handle both small projects and large enterprise applications?",
+      answer: "Yes, I work on projects of all sizes. For small projects, I focus on rapid development and efficient solutions. For larger enterprise applications, I implement scalable architecture, ensure maintainability, and can work as part of a development team to deliver complex features."
     },
     {
-      question: "What's unique about Mudassir's workspace setup?",
-      answer: "Mudassir's workspace is a perfect blend of minimalist design and technological abundance. It features custom-built mechanical keyboards, ambient lighting that shifts based on his focus states, and an ergonomic setup that prioritizes both health and productivity. Every element is carefully chosen to enhance creativity and efficiency."
+      question: "How do you ensure the quality and security of your code?",
+      answer: "I implement comprehensive testing strategies including unit, integration, and end-to-end tests. I follow security best practices for authentication, data protection, and input validation. I also conduct code reviews, use static analysis tools, and stay updated on security vulnerabilities."
     },
+    {
+      question: "Do you provide ongoing maintenance and support?",
+      answer: "Yes, I offer maintenance packages that include regular updates, security patches, performance monitoring, and bug fixes. I can also provide training for your team and documentation to ensure smooth operation of your application after the initial development."
+    }
   ];
 
   return (
-    <section id="faq" className="section py-24 bg-gradient-to-b from-background to-background/80 dark:from-background dark:to-background/90">
+    <section id="faq" className="section py-24 bg-gradient-to-b from-background to-background/80 dark:from-background dark:to-background/90" ref={sectionRef}>
       <div className="container">
         <div className="text-center mb-16 animate-on-scroll opacity-0">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-3 flex items-center justify-center mx-auto gap-2">
-            <HelpCircle size={14} className="animate-pulse" />
-            FAQ
+            <HelpCircle size={14} />
+            <span>FAQ</span>
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Common Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
           <p className="max-w-2xl mx-auto text-foreground/70">
-            Everything you need to know about Mudassir Abbas and his approach to technology and style.
+            Common questions about my development services and process
           </p>
         </div>
         
@@ -52,18 +84,12 @@ export function FAQSection() {
                 <AccordionTrigger className="text-lg font-medium py-5 hover:text-tech-accent transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-foreground/80 pb-5">
+                <AccordionContent className="text-foreground/70 pb-5 pt-2">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        </div>
-        
-        <div className="mt-10 text-center">
-          <p className="text-foreground/60 text-sm">
-            Can't find what you're looking for? <a href="#contact" className="text-tech-accent hover:underline">Reach out directly</a>.
-          </p>
         </div>
       </div>
     </section>

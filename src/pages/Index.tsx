@@ -15,6 +15,9 @@ const Index = () => {
     // Set dark mode by default
     document.documentElement.classList.add('dark');
     
+    // Set page title
+    document.title = "Mudassir Abbas | Full Stack Developer";
+    
     // Add scroll revealing animations
     const revealElements = document.querySelectorAll('.animate-on-scroll');
     
@@ -51,7 +54,7 @@ const Index = () => {
         <AboutSection />
         <SkillsSection />
         <WorkspaceSection />
-        <StyleSection />
+        <ProjectsSection />
         <FAQSection />
         <ContactSection />
       </main>

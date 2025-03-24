@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { ArrowDown, Code, Cpu, Zap } from 'lucide-react';
+import { ArrowDown, Code, Database, Server } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 export function HeroSection() {
@@ -38,31 +38,31 @@ export function HeroSection() {
           <div className="flex-1 space-y-6 text-left">
             <div>
               <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-5">
-                A New Generation of Engineers
+                Full Stack Developer
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight tracking-tight">
-                Where <span className="text-tech-accent">Tech</span> Meets <br />
+                Hi, I'm <span className="text-tech-accent">Mudassir Abbas</span> <br />
                 <span className="bg-gradient-to-r from-tech-blue to-tech-accent bg-clip-text text-transparent">
-                  Style & Innovation
+                  Web Developer & Architect
                 </span>
               </h1>
               <p className="mt-6 text-lg md:text-xl text-foreground/80 max-w-xl">
-                Meet Alex Chen, a software engineer who seamlessly blends cutting-edge code with avant-garde fashion, redefining what it means to be in tech.
+                I build robust, high-performance web applications from frontend to backend. Specializing in modern JavaScript frameworks and cloud architecture.
               </p>
             </div>
             
             <div className="flex flex-wrap gap-4 mt-8">
               <a 
-                href="#about" 
+                href="#projects" 
                 className="px-6 py-3 rounded-lg bg-tech-accent text-white font-medium flex items-center gap-2 transition-all hover:shadow-glow hover:translate-y-[-2px]"
               >
-                Discover <ArrowDown size={16} />
+                View My Work <ArrowDown size={16} />
               </a>
               <a 
                 href="#contact" 
                 className="px-6 py-3 rounded-lg border border-foreground/20 text-foreground font-medium flex items-center gap-2 transition-colors hover:bg-foreground/5"
               >
-                Get In Touch
+                Contact Me
               </a>
             </div>
           </div>
@@ -76,20 +76,23 @@ export function HeroSection() {
                     <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                     <div className="w-3 h-3 rounded-full bg-green-500"></div>
                   </div>
-                  <div className="ml-4 text-sm font-mono text-tech-light-gray opacity-60">~/workspace/innovative-project</div>
+                  <div className="ml-4 text-sm font-mono text-tech-light-gray opacity-60">~/projects/fullstack-app</div>
                 </div>
                 <div className="absolute top-20 left-5 right-5 bottom-5 overflow-hidden">
-                  <div className="font-mono text-sm text-tech-light-gray animate-pulse">
-                    <p><span className="text-tech-accent">const</span> <span className="text-tech-blue">engineer</span> = {`{`}</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">name</span>: <span className="text-tech-accent">'Alex Chen'</span>,</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">skills</span>: [<span className="text-tech-accent">'Frontend'</span>, <span className="text-tech-accent">'Architecture'</span>, <span className="text-tech-accent">'AI'</span>, <span className="text-tech-accent">'Fashion'</span>],</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">workspace</span>: <span className="text-tech-accent">'Minimalist Futuristic'</span>,</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">style</span>: <span className="text-tech-accent">'High-Tech Elegance'</span>,</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">projects</span>: [</p>
-                    <p className="ml-8">{`{`} <span className="text-tech-light-blue">name</span>: <span className="text-tech-accent">'Neural UI Framework'</span>, <span className="text-tech-light-blue">status</span>: <span className="text-tech-accent">'In Progress'</span> {`}`},</p>
-                    <p className="ml-8">{`{`} <span className="text-tech-light-blue">name</span>: <span className="text-tech-accent">'AR Fashion Tech'</span>, <span className="text-tech-light-blue">status</span>: <span className="text-tech-accent">'Planning'</span> {`}`},</p>
+                  <div className="font-mono text-sm text-tech-light-gray">
+                    <p><span className="text-tech-accent">const</span> <span className="text-tech-blue">developer</span> = {`{`}</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">name</span>: <span className="text-tech-accent">'Mudassir Abbas'</span>,</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">title</span>: <span className="text-tech-accent">'Full Stack Developer'</span>,</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">skills</span>: [<span className="text-tech-accent">'JavaScript'</span>, <span className="text-tech-accent">'React'</span>, <span className="text-tech-accent">'Node.js'</span>, <span className="text-tech-accent">'MongoDB'</span>],</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">experience</span>: <span className="text-tech-accent">'5+ years'</span>,</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">location</span>: <span className="text-tech-accent">'Remote'</span>,</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">currentProject</span>: <span className="text-tech-accent">'E-Commerce Platform'</span>,</p>
+                    <p className="ml-4"><span className="text-tech-light-blue">interests</span>: [</p>
+                    <p className="ml-8"><span className="text-tech-accent">'Cloud Architecture'</span>,</p>
+                    <p className="ml-8"><span className="text-tech-accent">'API Development'</span>,</p>
+                    <p className="ml-8"><span className="text-tech-accent">'Database Design'</span></p>
                     <p className="ml-4">],</p>
-                    <p className="ml-4"><span className="text-tech-light-blue">currentSong</span>: <span className="text-tech-accent">'Lo-Fi Coding Mix Vol.3'</span></p>
+                    <p className="ml-4"><span className="text-tech-light-blue">status</span>: <span className="text-tech-accent">'Available for hire'</span></p>
                     <p>{`}`};</p>
                     <p className="mt-4 animate-pulse">_</p>
                   </div>
@@ -106,18 +109,18 @@ export function HeroSection() {
           {[
             { 
               icon: <Code size={24} className="text-tech-accent" />, 
-              title: "Clean Code Artistry", 
-              description: "Writing elegant, efficient code that's as aesthetically pleasing as it is functional." 
+              title: "Frontend Development", 
+              description: "Creating responsive, accessible, and high-performance user interfaces with modern frameworks." 
             },
             { 
-              icon: <Zap size={24} className="text-tech-blue" />, 
-              title: "Cutting Edge Innovation", 
-              description: "Always at the forefront of technology, pushing boundaries and creating new possibilities." 
+              icon: <Server size={24} className="text-tech-blue" />, 
+              title: "Backend Development", 
+              description: "Building scalable server-side applications, RESTful APIs, and microservices." 
             },
             { 
-              icon: <Cpu size={24} className="text-tech-accent" />, 
-              title: "Fashion-Tech Fusion", 
-              description: "Seamlessly blending technological innovation with fashion-forward design principles." 
+              icon: <Database size={24} className="text-tech-accent" />, 
+              title: "Database Architecture", 
+              description: "Designing efficient database schemas, optimizing queries, and implementing data security." 
             }
           ].map((item, index) => (
             <div 

@@ -1,18 +1,18 @@
 
 import { useEffect, useRef } from 'react';
 import { 
-  Brain, 
   Code, 
   Database, 
-  Fingerprint, 
-  Layers, 
-  LineChart, 
-  Monitor, 
-  Palette, 
-  Scissors, 
-  Shirt, 
-  Sparkles, 
-  Zap
+  Layout, 
+  Server, 
+  Cloud,
+  Lock,
+  Smartphone,
+  BarChart,
+  Search,
+  Zap,
+  GitBranch,
+  Terminal
 } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
@@ -68,64 +68,64 @@ export function SkillsSection() {
   
   const skills = [
     {
-      icon: <Code size={20} />,
-      title: "Frontend Architecture",
-      description: "Building elegant, responsive interfaces with React, Vue, and custom frameworks."
+      icon: <Layout size={20} />,
+      title: "Frontend Development",
+      description: "Building responsive UIs with React, Next.js, and modern CSS frameworks like Tailwind."
+    },
+    {
+      icon: <Server size={20} />,
+      title: "Backend Development",
+      description: "Creating scalable server applications with Node.js, Express, and REST/GraphQL APIs."
     },
     {
       icon: <Database size={20} />,
-      title: "Backend Development",
-      description: "Creating scalable, secure systems with Node.js, Python, and cloud architecture."
+      title: "Database Management",
+      description: "Designing efficient database schemas and optimizing queries in MongoDB and PostgreSQL."
     },
     {
-      icon: <Brain size={20} />,
-      title: "AI & Machine Learning",
-      description: "Implementing intelligent systems and predictive algorithms."
+      icon: <Cloud size={20} />,
+      title: "Cloud Services",
+      description: "Deploying and managing applications using AWS, Azure, or Google Cloud Platform."
     },
     {
-      icon: <Fingerprint size={20} />,
-      title: "Blockchain Technology",
-      description: "Developing secure, decentralized applications and smart contracts."
+      icon: <Code size={20} />,
+      title: "JavaScript/TypeScript",
+      description: "Proficient in modern JavaScript and TypeScript for building maintainable applications."
     },
     {
-      icon: <Shirt size={20} />,
-      title: "Fashion Technology",
-      description: "Integrating tech into wearables and fashion-forward accessories."
+      icon: <Lock size={20} />,
+      title: "Security & Authentication",
+      description: "Implementing robust authentication flows and securing applications against common threats."
     },
     {
-      icon: <Palette size={20} />,
-      title: "UX/UI Design",
-      description: "Creating intuitive, beautiful user experiences and interfaces."
+      icon: <BarChart size={20} />,
+      title: "Performance Optimization",
+      description: "Enhancing application speed and efficiency through testing and code improvements."
     },
     {
-      icon: <LineChart size={20} />,
-      title: "Data Visualization",
-      description: "Transforming complex data into clear, actionable insights."
+      icon: <Smartphone size={20} />,
+      title: "Responsive Design",
+      description: "Creating interfaces that work flawlessly across all device sizes and screen types."
     },
     {
-      icon: <Sparkles size={20} />,
-      title: "Creative Coding",
-      description: "Using code as a medium for artistic expression and experimentation."
+      icon: <GitBranch size={20} />,
+      title: "Version Control",
+      description: "Managing code with Git, implementing CI/CD pipelines, and collaborative workflows."
     },
     {
-      icon: <Layers size={20} />,
-      title: "System Architecture",
-      description: "Designing robust, scalable technology ecosystems."
+      icon: <Search size={20} />,
+      title: "Testing & Debugging",
+      description: "Writing comprehensive tests and efficiently debugging complex applications."
     },
     {
-      icon: <Monitor size={20} />,
-      title: "DevOps & CI/CD",
-      description: "Streamlining development workflows and deployment processes."
-    },
-    {
-      icon: <Scissors size={20} />,
-      title: "Design Thinking",
-      description: "Approaching problems with a user-centered, iterative methodology."
+      icon: <Terminal size={20} />,
+      title: "DevOps",
+      description: "Setting up deployment pipelines, containerization with Docker, and server management."
     },
     {
       icon: <Zap size={20} />,
-      title: "Performance Optimization",
-      description: "Maximizing speed and efficiency across all technology stacks."
+      title: "API Development",
+      description: "Designing and building REST and GraphQL APIs with proper documentation and testing."
     }
   ];
   
@@ -134,11 +134,11 @@ export function SkillsSection() {
       <div className="container">
         <div className="text-center mb-16 animate-on-scroll opacity-0">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-3">
-            Expertise
+            Technical Skills
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Technical Brilliance</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Expertise</h2>
           <p className="max-w-2xl mx-auto text-foreground/70">
-            A diverse skill set spanning cutting-edge development, design thinking, and fashion technology integration.
+            A comprehensive toolkit of development skills honed through years of building web applications
           </p>
         </div>
         

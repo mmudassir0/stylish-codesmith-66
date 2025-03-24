@@ -1,6 +1,6 @@
 
 import { useEffect, useRef } from 'react';
-import { Award, Code2, Cpu, Lightbulb, LucideIcon, Smile } from 'lucide-react';
+import { Code2, Database, Server, Laptop, Lightbulb } from 'lucide-react';
 import { cn } from "@/lib/utils";
 
 interface SkillProps {
@@ -64,11 +64,11 @@ export function AboutSection() {
       <div className="container">
         <div className="text-center mb-16 animate-on-scroll opacity-0">
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-tech-accent/10 text-tech-accent mb-3">
-            The Engineer
+            About Me
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">About Alex Chen</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Mudassir Abbas</h2>
           <p className="max-w-2xl mx-auto text-foreground/70">
-            A visionary software engineer who embodies the perfect fusion of technical brilliance and avant-garde fashion.
+            A passionate full stack developer dedicated to creating seamless digital experiences with clean, efficient code.
           </p>
         </div>
         
@@ -76,12 +76,12 @@ export function AboutSection() {
           <div className="relative animate-on-scroll opacity-0">
             <div className="rounded-2xl overflow-hidden relative shadow-xl">
               <div className="aspect-[3/4] bg-gradient-to-br from-tech-blue/20 to-tech-accent/20 rounded-2xl relative overflow-hidden">
-                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-90 mix-blend-overlay"></div>
+                <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')] bg-cover bg-center opacity-90 mix-blend-overlay"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-tech-dark-blue/90 via-transparent to-transparent"></div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-xl font-semibold mb-1">Alex Chen</h3>
-                  <p className="text-sm text-tech-light-gray">Software Architect & Tech Stylist</p>
+                  <h3 className="text-xl font-semibold mb-1">Mudassir Abbas</h3>
+                  <p className="text-sm text-tech-light-gray">Full Stack Developer</p>
                 </div>
               </div>
             </div>
@@ -92,21 +92,21 @@ export function AboutSection() {
           
           <div className="space-y-8 animate-on-scroll opacity-0">
             <div>
-              <h3 className="text-2xl font-semibold mb-4">The Perfect Fusion</h3>
+              <h3 className="text-2xl font-semibold mb-4">Full Stack Developer & Problem Solver</h3>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Alex is not just a software engineer with over 8 years of experience in cutting-edge technologies. They represent a new breed of tech professionals who understand that innovation extends beyond code into personal expression.
+                With over 5 years of experience in web development, I specialize in building robust full stack applications that solve real-world problems. My journey in technology began with a passion for creating efficient solutions.
               </p>
               <p className="text-foreground/80 leading-relaxed">
-                With a background in computer science and a passion for fashion design, Alex bridges the gap between technical brilliance and aesthetic excellence, creating software that's as beautiful as it is functional.
+                I enjoy working across the entire development stack, from crafting intuitive user interfaces to designing scalable backend systems and optimizing database performance. My goal is to deliver clean, maintainable code that creates exceptional user experiences.
               </p>
             </div>
             
             <div className="grid grid-cols-2 gap-4">
               {[
-                { label: "Clean Code", value: "250+" },
-                { label: "Projects", value: "84" },
-                { label: "Tech Talks", value: "32" },
-                { label: "Fashion Shows", value: "12" }
+                { label: "Projects Completed", value: "35+" },
+                { label: "Clients Served", value: "20" },
+                { label: "Tech Articles", value: "15" },
+                { label: "GitHub Stars", value: "500+" }
               ].map((item, index) => (
                 <div key={index} className="p-4 glass-card">
                   <div className="text-2xl font-bold mb-1 text-tech-accent">{item.value}</div>
@@ -116,13 +116,13 @@ export function AboutSection() {
             </div>
             
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold">Technical Expertise</h4>
+              <h4 className="text-xl font-semibold">Core Technologies</h4>
               <div className="space-y-2">
-                <Skill icon={<Code2 size={20} />} title="Frontend Architecture" level={95} />
-                <Skill icon={<Cpu size={20} />} title="AI & Machine Learning" level={88} />
-                <Skill icon={<Lightbulb size={20} />} title="UX Design" level={92} />
-                <Skill icon={<Award size={20} />} title="Tech-Fashion Integration" level={96} />
-                <Skill icon={<Smile size={20} />} title="Team Leadership" level={90} />
+                <Skill icon={<Code2 size={20} />} title="JavaScript/TypeScript" level={95} />
+                <Skill icon={<Laptop size={20} />} title="React/Next.js" level={90} />
+                <Skill icon={<Server size={20} />} title="Node.js/Express" level={88} />
+                <Skill icon={<Database size={20} />} title="MongoDB/PostgreSQL" level={85} />
+                <Skill icon={<Lightbulb size={20} />} title="System Architecture" level={82} />
               </div>
             </div>
           </div>
